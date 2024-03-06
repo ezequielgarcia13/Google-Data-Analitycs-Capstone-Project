@@ -66,3 +66,8 @@ WHERE NOT (start_station_id IS NULL OR
 	start_station_name IS NULL OR
 	end_station_id IS NULL OR
 	end_station_name IS NULL);
+
+-- ELIMINAMOS VALORES ATIPICOS, ESTOS SON VIAJES CON DURACION NEGATIVA Y CON DURACION DE MAS DE UN DIA
+
+DELETE FROM tripdata2023_clean
+WHERE ride_lenght_mins <= 0 OR ride_lenght_mins > 1440;
