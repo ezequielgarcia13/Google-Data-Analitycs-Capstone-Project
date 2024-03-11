@@ -1,10 +1,10 @@
-# Google Data-Analitycs Capstone Project: Cyclistic
+# Google Data-Analitycs Capstone Project: Cyclistic 🚴
 
 ## Introducción
 
-En este estudio de caso se demuestran las habilidades que adquiri mediante los cursos que componen al Certificado Profesional de Análisis de datos de Google. Usaré estas habilidades para completar las tareas de un analista de datos que trabaja para la empresa ficticia de bicicletas compartidas Cyclistic. Para responder las preguntas comerciales, seguiré los pasos del proceso de análisis de datos: Preguntar, Preparar, Procesar, Analizar, Compartir y Actuar.
+En este estudio de caso se demuestran las habilidades que adquiri mediante los cursos que componen al Certificado Profesional de Análisis de datos de Google. Usaré estas habilidades para completar las tareas de un analista de datos que trabaja para la empresa ficticia de bicicletas compartidas Cyclistic. Para responder las preguntas comerciales, seguiré los pasos del proceso de análisis de datos: **Preguntar**, **Preparar**, **Procesar**, **Analizar**, **Compartir** y **Actuar**.
 
-### Escenario
+### Contexto
 La directora de Marketing de Cyclistic, cree que el éxito futuro de la empresa depende de maximizar el número de membresías anuales. Por lo tanto, mi equipo quiere comprender cómo los ciclistas ocasionales y los miembros anuales usan las bicicletas de manera diferente. A partir de estos conocimientos, mi equipo diseñará una nueva estrategia de marketing para convertir a los pasajeros ocasionales en miembros anuales. Pero primero, los ejecutivos de Cyclistic deben aprobar nuestras recomendaciones, por lo que deben estar respaldadas con información convincente y visualizaciones de datos profesionales.
 
 ### Acerca de la empresa
@@ -16,7 +16,7 @@ Los analistas financieros de Cyclistic llegaron a la conclusión de que los miem
 
 Moreno estableció una meta clara: Diseñar estrategias de marketing orientadas a convertir a los ciclistas ocasionales en miembros anuales. Sin embargo, para hacer eso, el equipo de analistas de marketing necesita entender mejor cómo difieren los miembros anuales y los ciclistas ocasionales, por qué los ciclistas ocasionales comprarían una membresía y cómo los medios digitales podrían afectar sus tácticas de marketing. Moreno y su equipo están interesados en analizar los datos históricos de viajes en bicicleta de Cyclistic para identificar tendencias.
 
-## Preguntar
+## Preguntar 💬
 
 ### Tarea empresarial
 
@@ -26,17 +26,19 @@ Obtener conocimientos mediante este análisis qur ayuden al equipo de marketing 
 
 Tres preguntas guiarán el futuro programa de marketing:
 
-    1. ¿En qué se diferencian los socios anuales y los ciclistas ocasionales con respecto al uso de las bicicletas de Cyclistic?
-    2. ¿Por qué los ciclistas ocasionales comprarían membresías anuales de Cyclistic?
-    3. ¿Cómo puede usar Cyclistic los medios digitales para influenciar a los ciclistas ocasionales a convertirse en miembros?
+ **1**. ¿En qué se diferencian los socios anuales y los ciclistas ocasionales con respecto al uso de las bicicletas de Cyclistic?
+ 
+ **2**. ¿Por qué los ciclistas ocasionales comprarían membresías anuales de Cyclistic?
+ 
+ **3**. ¿Cómo puede usar Cyclistic los medios digitales para influenciar a los ciclistas ocasionales a convertirse en miembros?
 
-## Preparar
+## Preparar ☑️
 
 Utilicé datos históricos de viajes de Cyclistic para analizar e identificar tendencias desde enero de 2023 hasta diciembre de 2023, provienen de [divvy_tripdata](https://divvy-tripdata.s3.amazonaws.com/index.html) y han sido puestos a disposición por Motivate International Inc. bajo esta [licencia](https://divvybikes.com/data-license-agreement).
 
 Hay 12 archivos y cada archivo incluye información de un mes, como el id del viaje, el tipo de bicicleta, la hora de inicio, la hora de finalización, la estación de inicio, la estación de finalización, la ubicación de inicio, la ubicación de finalización y si el usuario es miembro o no. Los nombres de las columnas son: ride_id, rideable_type, start_at, end_at, start_station_name, start_station_id, end_station_name, end_station_id, start_lat, start_lng, end_lat, end_lng y member_casual.
 
-## Procesar
+## Procesar ⚙️
 
 Utilicé SQLite para unir todos los conjuntos de datos en uno solo. Luego de cargar los 12 archivos csv los uní a todos en una nueva tabla, "tripdata2023", la cual contiene 5719877 registros.
 
@@ -46,7 +48,10 @@ Allí se crearon las columnas **ride_lenght_mins**, la cual contiene la duració
 También se eliminaron filas con valores nulos, estos se encontraban en las columnas relacionadas a las estaciones de comienzo y final de los recorridos. Tambíen se eliminaron filas que contenían valores atípicos dentro de la columna ride_lenght_mins.
 Luego de confirmar que el conjunto de datos no contiene valores duplicados pasamos al siguiente paso, de análisis. 
 
-## Análisis
+## Análizar y Compartir 📊
+
+Los datos se encuentran almacenados correctamente y están preparados para pasar al proceso de [análisis](https://github.com/ezequielgarcia13/Google-Data-Analitycs-Capstone-Project/blob/main/Analisis%20datos.sql).
+Hice diferentes consultas que creí relevantes para el análisis y luego realicé las vizualizaciones correspondientes en tableau. El análisis se centra en demostrar cómo se diferencian en el uso de bicicletas los miembros anuales de los usuarios casuales.
 
 
 
